@@ -32,14 +32,14 @@ jobs:
       - name: Clonar pruebas UI desde otro repositorio
         uses: actions/checkout@v3
         with:
-        repository: Jose-Moyano/petstore-ui-tests # Reemplaza con el repo correcto
-        token: ${{ secrets.GITHUB_TOKEN }} # solo para repositorios privados
-        path: ui-tests
+          repository: Jose-Moyano/petstore-ui-tests # Reemplaza con el repo correcto
+          token: ${{ secrets.GITHUB_TOKEN }} # solo para repositorios privados
+          path: ui-tests
 
       - name: Configurar Node.js
         uses: actions/setup-node@v3
         with:
-        node-version: '20'
+          node-version: '20'
 
       - name: Instalar dependencias del proyecto UI
         working-directory: ui-tests
